@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+struct MenuItem {
+    string name;
+    string description;
+    double price;
+};
+
+vector<MenuItem> menu = {
+    {"Bun dau", "Bun cha","Bun bo hue", 40000},
+    {" Com rang"," Nem nuong","Pho bo","Bun ca", 35000},
+    {"Com tam",45000},
+    {"Xoi",25000},
+    {"Banh mi",20000},
+};
+
+void searchMenu(const string& searchTerm) {
+    cout << "Kết quả tìm kiếm: " << endl;
+
+    for (const auto& item : menu) {
+        if (item.name.find(searchTerm) != string::npos) {
+            cout << "Tên: " << item.name << ", Mô tả: " << item.description << ", Giá: " << item.price << endl;
+        }
+    }
+}
+
+int main() {
+    string searchTerm;
+    cout << "Nhập từ khóa tìm kiếm: ";
+    getline(cin, searchTerm);
+
+    searchMenu(searchTerm);
+
+    return 0;
+}
