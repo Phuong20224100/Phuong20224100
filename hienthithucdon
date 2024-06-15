@@ -1,0 +1,23 @@
+void hienfoodlist (){
+  cls();
+printf("\n\t\t\t\t         ===THUC DON HOM NAY===\n\n");
+printf("\n\t\t\t");
+printf("\n\t\t");
+printf("_______________________________________________________");
+printf("\n\t\t");
+printf("|    Thu tu   |        Ten             |       Gia      ");
+printf("\n\t\t");
+printf("---------------------------------------------------------");
+node *temp;
+temp = list;
+while(temp !=NULL){
+printf("\n\t\t");
+printf("|     %d       |         %s             |        %.0f     ",temp->data,temp->foodname,temp->price);
+printf("\n\t\t");
+printf("---------------------------------------------------------");
+temp=temp->next;
+}
+printf("\n\n\t\t\t Nhan phim bat ki de tiep tuc.....");
+getch();
+}
+  
